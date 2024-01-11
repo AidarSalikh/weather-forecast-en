@@ -1,20 +1,13 @@
 import "./App.css";
-import { CurrentWeatherTop } from "./components/CurrentWeatherTop";
-import { TodayHourlyWeather } from "./components/TodayHourlyWeather";
-import { WeeklyWeatherTable } from "./components/WeeklyWeatherTable";
-import { SearchCity } from "./components/SearchCity";
-
+import Main from "./components/Main";
 
 function App() {
 
 
 
   return (
-    <div className="App">
-      <SearchCity  />
-      <CurrentWeatherTop />
-      <TodayHourlyWeather />
-      <WeeklyWeatherTable />
+    <div  className="App">
+      <Main />
     </div>
   );
 }

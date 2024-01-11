@@ -34,25 +34,25 @@ export const SearchCity = () => {
 
   const customStyles = {
     control: (provided, state) => ({
-        ...provided,
-        borderRadius: '1rem',
-        border: '2px solid #ccc',
-        // padding: '5px',
-        // boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
-        backgroundColor: '#e3ecf7',
-
+      ...provided,
+      borderRadius: "10px",
+      border: "2px solid #ccc",
+      // width: "50vw",
+      // padding: '5px',
+      // boxShadow: state.isFocused ? '0 0 0 2px #3699FF' : null,
+      backgroundColor: '#e3ecf74e',
     }),
     option: (provided, state) => ({
-        ...provided,
-        // backgroundColor: state.isFocused ? '#3699FF' : null,
-        // color: state.isFocused ? 'white' : null,
+      ...provided,
+      // backgroundColor: state.isFocused ? '#3699FF' : null,
+      // color: state.isFocused ? 'white' : null,
     }),
-}
+  };
 
   return (
-    <div>
+    <section className="search">
       <AsyncPaginate
-      // className="asyncPaginate"
+        // className="asyncPaginate"
         placeholder="Search for city"
         debounceTimeout={600}
         value={search}
@@ -60,6 +60,6 @@ export const SearchCity = () => {
         loadOptions={loadOptions}
         styles={customStyles}
       />
-    </div>
+    </section>
   );
 };

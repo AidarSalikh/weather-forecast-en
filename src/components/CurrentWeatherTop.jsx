@@ -6,7 +6,7 @@ export const CurrentWeatherTop = () => {
     useContext(WeatherContext);
 
   return (
-    <div className="weatherTop">
+    <section className="weatherTop">
 
       <h3>{city}</h3>
       <h1>{currentTemp}</h1>
@@ -15,6 +15,6 @@ export const CurrentWeatherTop = () => {
         <h5>H: {Math.round(currentMaxTemp)}&deg;</h5>
         <h5>L: {Math.round(currentMinTemp)}&deg;</h5>
       </div>
-    </div>
+    </section>
   );
 };

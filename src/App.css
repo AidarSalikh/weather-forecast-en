@@ -1,19 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
+
+:root {
+  --BG-COLOR: rgba(227, 236, 247, 0.306);
+  --TXT-SHADOW: 5px 5px 12px rgb(253, 253, 253);
+}
+
+#root {
+  max-width: 1280px;
+  /* height: 100vh; */
+  /* width: 100vw; */
+
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  /* flex-grow: 1; */
+}
+
+.App {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: aqua; */
+
+  /* padding: 2rem; */
+}
+
+main {
+  padding: 2rem;
+  background-size: cover;
+}
+
+/* @media screen and (max-width: 600px){
+  .App {
+    width: 100%
+  }
+} */
 
 img {
   height: 3rem;
+}
+
+.search {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* //////// TOP ///////// */
@@ -26,6 +63,7 @@ img {
 .weatherTop h1 {
   font-size: 5rem;
   font-weight: 500;
+  text-shadow: VAR(--TXT-SHADOW);
   /* margin-left: 1rem; */
   letter-spacing: 7px;
 }
@@ -36,10 +74,12 @@ img {
 .weatherTop h3 {
   font-size: 3rem;
   font-weight: 400;
+  text-shadow: VAR(--TXT-SHADOW);
 }
 .weatherTop h5 {
   font-size: 1rem;
   font-weight: 500;
+  text-shadow: VAR(--TXT-SHADOW);
 }
 
 .minMaxTemp {
@@ -53,7 +93,7 @@ img {
 /* //////// CAROUSEL ///////// */
 
 .carouselContainer {
-  background-color: hsl(213, 56%, 93%);
+  background-color: var(--BG-COLOR);
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
@@ -97,7 +137,7 @@ img {
   border-bottom: 0.1rem solid rgb(52, 210, 221);
   margin-bottom: 1rem;
 
-  background-color: rgb(227, 236, 247);
+  background-color: var(--BG-COLOR);
   border-radius: 1rem;
   padding: 1rem;
   font-weight: 500;

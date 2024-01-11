@@ -42,7 +42,7 @@ export const TodayHourlyWeather = () => {
     ],
   };
   return (
-    <div className="carouselContainer">
+    <section className="carouselContainer">
       <Slider {...settings}>
         {forecastHours
           .filter((el) => el.time_epoch >= currentHour)
@@ -50,6 +50,6 @@ export const TodayHourlyWeather = () => {
             return <HourlyCard key={index} el={el} index={index} />;
           })}
       </Slider>
-    </div>
+    </section>
   );
 };

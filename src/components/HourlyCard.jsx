@@ -26,12 +26,12 @@ export default function HourlyCard({ index, el }) {
   };
 
   return (
-    <div key={index} className="card">
+    <article key={index} className="card">
       <div className="cardElements">
         <p>{index === 0 ? "NOW" : HOUR_FORMATTER.format(hours)}</p>
         <p>{Math.round(el.temp_c)}&deg;</p>
         <img src={iconsObj[currentIcon]} alt="#" />
       </div>
-    </div>
+    </article>
   );
 }

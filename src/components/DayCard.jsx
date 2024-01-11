@@ -28,11 +28,11 @@ export default function DayCard({ index, dayInfo }) {
   };
 
   return (
-    <div key={index} className="dayForecast">
+    <article key={index} className="dayForecast">
       <p>{index === 0 ? "Today" : DAY_FORMATTER.format(dayDate)}</p>
       <img src={iconsObj[conditionIcon]} alt="#" />
       <p>{Math.round(day.mintemp_c)}</p>
       <p>{Math.round(day.maxtemp_c)}</p>
-    </div>
+    </article>
   );
 }

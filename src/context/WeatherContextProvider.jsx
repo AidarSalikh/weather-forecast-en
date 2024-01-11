@@ -36,7 +36,7 @@ export const WeatherContextProvider = ({ children }) => {
   }, [options]);
 
   if (!weather) return null;
-
+  console.log('weather',  weather)
   const {
     feelslike_c: feelsLikeCel,
     temp_c: currentTemp,

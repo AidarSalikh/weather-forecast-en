@@ -4,7 +4,7 @@ import { WeatherContext } from "../context/WeatherContextProvider";
 export const CurrentWeatherTop = () => {
   const { currentMaxTemp, currentMinTemp, currentTemp, condition, city } =
     useContext(WeatherContext);
-  console.log("currentWeather", currentTemp);
+
   return (
     <section className="weatherTop">
       <h3>{city}</h3>

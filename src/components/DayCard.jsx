@@ -8,6 +8,8 @@ import lightRain from "../assets/icons/light-rain.png";
 import smog from "../assets/icons/smog.png";
 import snow from "../assets/icons/snow.png";
 import sun from "../assets/icons/sun.png";
+import highTemp from "../assets/icons/low-temperature.png";
+import lowTemp from "../assets/icons/high-temperature.png";
 
 export default function DayCard({ index, dayInfo }) {
   const DAY_FORMATTER = new Intl.DateTimeFormat("en-US", { weekday: "short" });
@@ -26,13 +28,21 @@ export default function DayCard({ index, dayInfo }) {
     sun,
     snow,
   };
-
+  console.log("day info:", day.condition.text);
   return (
     <article key={index} className="dayForecast">
       <p>{index === 0 ? "Today" : DAY_FORMATTER.format(dayDate)}</p>
       <img src={iconsObj[conditionIcon]} alt="#" />
-      <p>{Math.round(day.mintemp_c)}</p>
-      <p>{Math.round(day.maxtemp_c)}</p>
+      <p className="dayForecast_condition">{day.condition.text}</p>
+
+      <div className="minMax">
+        <img src={highTemp} alt="" className="minMax_img" />
+        <p>{Math.round(day.mintemp_c)}&deg;</p>
+      </div>
+      <div className="minMax">
+        <img src={lowTemp} alt="" className="minMax_img" />
+        <p>{Math.round(day.maxtemp_c)}&deg;</p>
+      </div>
     </article>
   );
 }

@@ -23,7 +23,6 @@ export default function Main() {
     snow,
     cloudSun,
   };
-
   const currentIcon = BG_MAP.get(condition.code);
 
   const backgroundStyle = {

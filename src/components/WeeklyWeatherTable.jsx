@@ -8,7 +8,7 @@ export const WeeklyWeatherTable = () => {
   return (
     <section className="weeklyContainer">
       <div className="weeklyTable">
-        <h4>10-DAY FORECAST</h4>
+        <h4>3-DAY FORECAST</h4>
         {forecastDays.map((dayInfo, index) => {
           return <DayCard key={index} dayInfo={dayInfo} index={index} />;
         })}

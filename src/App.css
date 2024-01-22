@@ -108,9 +108,8 @@ img {
 }
 .dayForecast {
   display: grid;
-  grid-template-columns: 1fr 1fr 300px 50px 50px;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  gap: 2rem;
   border-bottom: 0.1rem solid rgb(52, 210, 221);
   margin-bottom: 1rem;
 
@@ -121,12 +120,17 @@ img {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 600px) {
+.dayForecast_condition {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
   .dayForecast {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 300px 50px 50px;
+    gap: 1rem;
   }
   .dayForecast_condition {
-    display: none;
+    display: block;
   }
 }
 
